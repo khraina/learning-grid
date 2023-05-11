@@ -17,7 +17,7 @@ body{
     padding:10px;
     /*display:flex; row wise box*/
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr; /*100px 200px 300px or 10% 20% 30%  repeat(3,1fr) */
+    grid-template-columns: repeat(autofill,minmax(200px,1fr)); /*100px 200px 300px or 10% 20% 30%  repeat(3,1fr) */
     column-gap: 10px;
     row-gap:10px;
     
@@ -50,3 +50,11 @@ body{
     grid-row:2/4;
 } 
 */
+
+/*responsiveness- when broswer shrinked to 500px it becomes stacker*/
+
+@media(max-width:500px){
+    .comtainer{
+        grid-template-columns: 1fr;
+    }
+}
